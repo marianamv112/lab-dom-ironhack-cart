@@ -44,9 +44,21 @@ window.onload = function(){
   var deleteButtons = document.getElementsByClassName('btn-delete');
 
   calculatePriceButton.onclick = getTotalPrice;
-  createItemButton.onclick = createNewItem;
+  //createItemButton.onclick = createNewItem;
 
   for(var i = 0; i<deleteButtons.length ; i++){
     deleteButtons[i].onclick = deleteItem;
   }
+
+  calculatePriceButton.onclick = function() {
+    let input = document.querySelector('input');
+    let unitCost = document.getElementsByClassName("unitCost");
+    let totalPrice = document.getElementsByClassName("totalPrice");
+  
+    if (input.value) {
+      totalPrice[0].innerText = '$' + (input.value * Number(unitCost[0].innerText.substring(1))).toFixed(2);
+      
+    }
+  }
+
 };
