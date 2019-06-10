@@ -11,7 +11,7 @@
 </head>
 <body>
   <h1>IronHack Merchandise Shop</h1>
-  <div class="wrapper">
+  <section class="wrapper">
     <div class="productName">
       <span>IronBubble-head</span>
     </div>
@@ -22,14 +22,38 @@
       <label for="input">QTY</label>
       <input type="number" class="quantity">
     </div>
-    <div class="total">
-      <span class="totalPrice">$0.00</span>
+    <div class="subtotal">
+      <span class="subtotalPrice">$0.00</span>
     </div>
     <div>
       <button class="btn-delete" >Delete</button>
     </div>
-  </div>
+  </section>
+
+  <section class="wrapper">
+      <div class="productName">
+        <span>IronShirt</span>
+      </div>
+      <div class="unitCost">
+        <span>$15.00</span>
+      </div>
+      <div class="inputQty">
+        <label for="input">QTY</label>
+        <input type="number" class="quantity">
+      </div>
+      <div class="subtotal">
+        <span class="subtotalPrice">$0.00</span>
+      </div>
+      <div>
+        <button class="btn-delete" >Delete</button>
+      </div>
+    </section>
+    <section class='wrapper'>
+      <input type="text" id='nem-item-name'>
+      <input type="number" id='new-item-price'>
+      <button id="new-item-create">Create</button>
+    </section>
     <button class="btn-success" id="calc-prices-button">Calculate Prices</button>
-  
+    <h2>Total Price: <span class="totalPrice">$0</span></h2>
 </body>
 </html>
